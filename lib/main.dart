@@ -32,6 +32,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:state_project/home_screen.dart';
+import 'package:state_project/state_provider.dart';
 
 void main(){
   runApp(MyApp());
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
     return ProviderScope(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        home: StateProviderScreen(),
       ),
     );
   }
