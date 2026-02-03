@@ -32,9 +32,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:state_project/dynamic_crud/presentation/product_screen.dart';
+import 'package:state_project/future_provider/future_screen.dart';
 import 'package:state_project/home_screen.dart';
 import 'package:state_project/state_notifier/search_screen.dart';
 import 'package:state_project/state_provider.dart';
+import 'package:state_project/stream_provider/stream_screen.dart';
 import 'package:state_project/to_do_app/item_screen.dart';
 
 import 'multi_state/slider_screen.dart';
@@ -51,7 +53,7 @@ class MyApp extends StatelessWidget {
     return ProviderScope(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ProductScreen(),
+        home: StreamScreen(),
       ),
     );
   }
