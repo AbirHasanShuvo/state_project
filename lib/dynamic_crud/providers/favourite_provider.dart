@@ -8,7 +8,14 @@ final favouriteProvider = StateNotifierProvider((ref) {
 
 class FavouriteNotifier extends StateNotifier<FavouriteStates> {
   FavouriteNotifier()
-    : super(FavouriteStates(search: '', allItems: [], filteredItems: []));
+    : super(
+        FavouriteStates(
+          search: '',
+          allItems: [],
+          filteredItems: [],
+          favourite: 'All',
+        ),
+      );
 
   void addItem() {
     List<Item> items = [
@@ -73,7 +80,7 @@ class FavouriteNotifier extends StateNotifier<FavouriteStates> {
 
   void favourite(String option) {
     state = state.copyWith(
-      filteredItems: _filteredItems(state.allItems, option),
+      filteredItems: _favouriteItem(state.allItems, option),
     );
   }
 

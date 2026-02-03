@@ -4,11 +4,13 @@ class FavouriteStates {
   final List<Item> allItems;
   final List<Item> filteredItems;
   final String search;
+  final String favourite;
 
   FavouriteStates({
     required this.search,
     required this.allItems,
     required this.filteredItems,
+    required this.favourite,
   });
 
   FavouriteStates copyWith({
@@ -20,6 +22,7 @@ class FavouriteStates {
       search: search ?? this.search,
       allItems: allItems ?? this.allItems,
       filteredItems: filteredItems ?? this.filteredItems,
+      favourite: favourite ?? this.favourite,
     );
   }
 }
