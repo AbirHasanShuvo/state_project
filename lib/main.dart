@@ -32,8 +32,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:state_project/home_screen.dart';
-import 'package:state_project/slider/slider_screen.dart';
+import 'package:state_project/state_notifier/search_screen.dart';
 import 'package:state_project/state_provider.dart';
+
+import 'multi_state/slider_screen.dart';
 
 void main(){
   runApp(MyApp());
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
     return ProviderScope(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SliderScreen(),
+        home: SearchScreen(),
       ),
     );
   }

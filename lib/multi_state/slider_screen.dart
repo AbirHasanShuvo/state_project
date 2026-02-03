@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_riverpod/legacy.dart';
-import 'package:state_project/slider/slider_provider.dart';
+import 'package:state_project/multi_state/slider_provider.dart';
 
 class SliderScreen extends ConsumerWidget {
   const SliderScreen({super.key});
@@ -11,6 +10,7 @@ class SliderScreen extends ConsumerWidget {
     // final slider = ref.watch(sliderProvider);
     print('build');
     return Scaffold(
+
       appBar: AppBar(title: Text('Slider Page'), centerTitle: true),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
