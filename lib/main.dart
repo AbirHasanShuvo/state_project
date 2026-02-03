@@ -34,6 +34,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:state_project/home_screen.dart';
 import 'package:state_project/state_notifier/search_screen.dart';
 import 'package:state_project/state_provider.dart';
+import 'package:state_project/to_do_app/item_screen.dart';
 
 import 'multi_state/slider_screen.dart';
 
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
     return ProviderScope(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SearchScreen(),
+        home: ItemScreen(),
       ),
     );
   }
