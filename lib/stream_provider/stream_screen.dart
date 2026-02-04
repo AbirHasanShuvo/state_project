@@ -7,15 +7,23 @@ class StreamScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final streamProvider = ref.watch(stockPriceProvider);
+    print('rebuilding widget');
     return Scaffold(
-      body: Center(
-        child: streamProvider.when(
-          data: (stream) =>
-              Text(stream.toStringAsFixed(2), style: TextStyle(fontSize: 35)),
-          error: (error, stack) => Text(error.toString()),
-          loading: () => const CircularProgressIndicator(),
-        ),
+      body: Consumer(
+        builder: (context, ref, child) {
+          final streamProvider = ref.watch(stockPriceProvider);
+          print('consumer rebuilding');
+          return Center(
+            child: streamProvider.when(
+              data: (stream) => Text(
+                stream.toStringAsFixed(2),
+                style: TextStyle(fontSize: 35),
+              ),
+              error: (error, stack) => Text(error.toString()),
+              loading: () => const CircularProgressIndicator(),
+            ),
+          );
+        },
       ),
     );
   }
